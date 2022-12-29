@@ -1,0 +1,52 @@
+lstm:
+  train:
+    epochs: 20
+    predLen: 8
+    obsLen: 12
+    learningRate: 0.0007
+    cuda: False
+    dataDir: "./train"
+    testDir: "./test"
+    dataset: "train_lstm"
+
+  test:
+    model: "vanilla_lstm_model_lr_0.0017_epoch_100_predlen_8_batchsize_5.pt"
+    testDir: "./test"
+    predLen: 8
+
+  visualize:
+    model: "vanilla_lstm_model_lr_0.0017_epoch_100_predlen_8_batchsize_5.pt"
+    testDir: "./test"
+    dataset: "eth"
+    predLen: 8
+
+gru:
+  train:
+    epochs: 20
+    predLen: 8
+    obsLen: 12
+    learningRate: 0.0007
+    cuda: False
+    dataDir: "./train"
+    testDir: "./test"
+    dataset: "eth"
+
+  test:
+    model: "vanilla_lstm_model_lr_0.0017_epoch_100_predlen_8_batchsize_5.pt"
+    testDir: "./test"
+    predLen: 8
+
+  visualize:
+    model: "vanilla_lstm_model_lr_0.0017_epoch_100_predlen_8_batchsize_5.pt"
+    testDir: "./test"
+    dataset: "eth"
+    predLen: 8
+
+slstm:
+  model:
+    nb_iter: 20
+    embedded_input: 64
+    hidden_size: 128
+    grid_size: 16
+    embedding_occupancy_map_size: 64
+    trained_model: ""
